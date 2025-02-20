@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpg';
 import { login, signup } from '../firebase';
 import spinner from '../assets/netflix_spinner.gif';
 
@@ -30,7 +30,7 @@ const Login = () => {
         <img src={spinner} alt="" />
       </div> :
     <div className='login'>
-    <img src={logo} className='logo-login' alt="" />
+    <img style={{height:"20px"}} src={logo} className='logo-login' alt="" />
 
     <div className="login-form">
       <h1>{sign}</h1>
@@ -58,7 +58,7 @@ const Login = () => {
       </form>
          <div className="form-switch">
           {sign === 'Sign In' ? 
-          <p>New to Netflix? <span onClick={()=>{setSign("Sign Up")}}>Sign Up  Now</span></p> 
+          <p>New to Streamflix? <span onClick={()=>{setSign("Sign Up")}}>Sign Up  Now</span></p> 
           :   <p>Already Have Account<span onClick={()=>{setSign("Sign In")}}>Sign In Now</span></p>
         }
           

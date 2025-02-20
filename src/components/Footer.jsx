@@ -33,7 +33,7 @@ const Footer = () => {
         <li>Contact US</li>
        </ul>
 
-        <p className='copyright-text'>@ 11997-2023 Netfix, Inc.</p>
+        <p className='copyright-text'>@ 11997-2023 StreamFlix, Inc.</p>
       </div>
     </>
   )

@@ -28,7 +28,7 @@ const HomePage = () => {
        </div>
        <div className="more-cards">
        <TitleCard title={"Blockbuster Movies"} category={"popular"} />
-       <TitleCard title={"Only on Netflix"}  category={"top_rated"} />
+       <TitleCard title={"Only on Streamflix"}  category={"top_rated"} />
        <TitleCard title={"Upcoming"}  category={"upcoming"} />
        <TitleCard title={"Top picks for you"}  category={"now_playing"} />
        </div>

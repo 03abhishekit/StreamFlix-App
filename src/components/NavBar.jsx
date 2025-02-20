@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './NavBar.css';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpg';
 import search from '../assets/search_icon.svg';
 import bell_icons from '../assets/bell_icon.svg';
 import profile from '../assets/profile_img.png';
@@ -46,7 +46,7 @@ const NavBar = () => {
             <img src={caret_icons} alt="" className="profile" />
             
             <div className="dropdown">
-              <p onClick={()=>{logout()}}>Sign Out of Netflix</p>
+              <p onClick={()=>{logout()}}>SignOut </p>
             </div>
           </div>
 
