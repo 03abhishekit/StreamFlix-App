@@ -1,6 +1,6 @@
 .navbar{
     width: 100%;;
-    padding: 20px, 6%;
+    padding: 30px;
     display:flex;
     justify-content: space-between;
     position: fixed;
@@ -18,7 +18,7 @@
 
 
 .navbar-left img{
-    width: 90px;
+    width: 80px;
 }
 
 .navbar-left ul{
@@ -35,11 +35,11 @@
 .navbar-right{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .navbar-right .icons{
-    width: 20px;
+    width: 25px;
     cursor: pointer;
 
 } 
@@ -47,13 +47,13 @@
 
 .navbar-right .profile{
     border-radius: 4px;
-    width: 35px;
+    width: 20px;
 }
 .navbar-profile{
-    display: flex;
-   align-items: center;
-   cursor: pointer;
-   gap: 10px;
+   display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
     position: relative ;
 }
 
@@ -64,7 +64,7 @@
     right: 0;
     width: max-content;
     background: #191919;
-    padding: 18px 22px;
+    padding: 12px 18px;
     border-radius: 2px;
     text-decoration: underline;
     z-index: 1;
@@ -72,16 +72,41 @@
 }
 
 .navbar .dropdown p{
-    font-size: 13px;
+    font-size: 10px;
     cursor: pointer;
 }
 
 
-.navbar-profile :hover .dropdown{
+.navbar-profile:hover .dropdown{
     display: block;
 }
 
 
 .nav-dark{
     background: #141414;
+}
+
+
+@media (max-width : 800px) {
+    .navbar{
+        padding: 20px 4%;
+    }
+    .navbar-left ul{
+        display: none;
+        
+    }
+    .navbar img{
+        height: 25px;
+    }
+}
+
+
+@media (max-width : 500px) {
+    
+    .navbar img{
+        height: 20px;
+    }
+    .navbar-right{
+       gap: 10px;
+    }
 }

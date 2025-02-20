@@ -1,7 +1,7 @@
 
 
 .footer{
-    padding: 30px 4%;
+    padding: 20px 4%;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -13,6 +13,7 @@
 }
 
 .footer-icons img{
+    padding: 5px;
     width: 30px;
     cursor: pointer;
 }
@@ -31,3 +32,15 @@
     font-size: 14px;
 }
 
+
+@media (max-width : 800px){
+    .footer-icons img{
+        width: 25px;
+    }
+
+    .footer-icons ul{
+        grid-template-columns: auto auto;
+        gap: 8px;
+        font-size: 14px;
+    }
+}

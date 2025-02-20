@@ -10,11 +10,13 @@
 }
 
 .player img{
+   
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     width: 50px;
-    cursor: pointer ;
+    cursor: pointer;
+
 }
 
 .player iframe{

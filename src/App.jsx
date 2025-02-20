@@ -1,14 +1,33 @@
-import React from 'react'
-import {BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { Routes, Route, NavLink, useNavigate} from 'react-router-dom';
 import HomePage from './pages/HomePage'
 import Login from './pages/Login';
 import Player from './pages/Player';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+      onAuthStateChanged(auth, async(user)=>{
+            if(user){
+              console.log("Logged In");
+              navigate('/');
+            }else{
+              console.log("Logged Out");
+              navigate('/login');
+            }
+      });
+  },[]);
   return (
-    <Router>
+    <>
     <div>
-      <h3>React Netflix Clone</h3>
+     
+    <ToastContainer theme='dark' />
       <Routes>
 
         <Route path='/' element={<HomePage/>} />
@@ -18,7 +37,7 @@ const App = () => {
 
 
     </div>
-    </Router>
+    </>
   )
 }
 
